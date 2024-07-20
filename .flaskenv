@@ -1,0 +1,2 @@
+FLASK_APP=booksys.py
+FLASK_ENV=development
