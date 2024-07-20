@@ -1,18 +1,25 @@
 {% extends "base.html" %}
-{% block title %}Login{% endblock %}
+{% block title %}Empréstimos{% endblock %}
 {% block content %}
     <h2>Empréstimos</h2>
-    <form method="POST" action="{{ url_for('main.loan_page') }}">
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <div>
-            <button type="submit">Login</button>
-        </div>
-    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Livro</th>
+                <th>Usuário</th>
+                <th>Data de Devolução</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for loan in loans %}
+            <tr>
+                <td>{{ loan.id }}</td>
+                <td>{{ loan.book }}</td>
+                <td>{{ loan.user }}</td>
+                <td>{{ loan.due_date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}

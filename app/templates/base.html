@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <nav>
+    <nav class="menu">
+        <h1>BookSys</h1>
         <a href="{{ url_for('main.index') }}">Home</a>
         <a href="{{ url_for('main.login') }}">Login</a>
         <a href="{{ url_for('main.book_page') }}">Livros</a>

@@ -23,3 +23,13 @@ form {
 form div {
     margin-bottom: 10px;
 }
+
+.logo {
+    margin-bottom: 20px;
+    /* font-size: 24px; */
+    color: #007BFF;
+}
+
+.login-container {
+    text-align: center;
+}
